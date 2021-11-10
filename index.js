@@ -5,6 +5,9 @@ let noSimpleNumbers = true;
 const simpleNumbers = [];
 
 const isSimple = (number) => {
+	if (number === -1 || number === 0 || number === 1){
+		return false;
+	};
 	for (let i = 2; i < Math.abs(number); i++){
 		if (number % i === 0){
 			return false;
