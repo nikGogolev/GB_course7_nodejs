@@ -76,21 +76,10 @@ params.forEach((time, i) => {
 });
 
 emitter.on('showTimer', showTimer);
-/*
-const run = async (timers) => {
-	timers.forEach((timer) => {
-		emitter.emit('showTimer', timer);
-	});
-  await new Promise(resolve => setTimeout(resolve, 1000));
-  console.clear();
-  await run(timers);
-}
-*/
+
 setInterval(() => {
 	console.clear();
 	timers.forEach((timer) => {
 		emitter.emit('showTimer', timer);
 	});
 }, 1000);
-
-//run(timers);
