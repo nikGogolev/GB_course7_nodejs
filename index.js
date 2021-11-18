@@ -59,7 +59,7 @@ const showTimer = (timer) => {
 	${timeLeft.daysLeft} дней,
 	${timeLeft.hoursLeft} часов,
 	${timeLeft.minutesLeft} минут,
-	${timeLeft.secondsLeft} секунд,`));
+	${timeLeft.secondsLeft} секунд`));
 	} else {
 		console.log(colors.red(
 `Таймер № ${timer.timerId}
@@ -76,7 +76,7 @@ params.forEach((time, i) => {
 });
 
 emitter.on('showTimer', showTimer);
-
+/*
 const run = async (timers) => {
 	timers.forEach((timer) => {
 		emitter.emit('showTimer', timer);
@@ -85,5 +85,12 @@ const run = async (timers) => {
   console.clear();
   await run(timers);
 }
+*/
+setInterval(() => {
+	console.clear();
+	timers.forEach((timer) => {
+		emitter.emit('showTimer', timer);
+	});
+}, 1000);
 
-run(timers);
+//run(timers);
