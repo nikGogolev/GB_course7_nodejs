@@ -1,0 +1,17 @@
+{
+  "name": "course7_nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "colors": "^1.4.0",
+	"moment": "^2.29.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+	"dev": "node index.js 00-00-31-12-2021 00-00-17-01-2022",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
